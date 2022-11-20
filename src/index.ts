@@ -1,6 +1,10 @@
 import express from 'express';
+import config from "./config"
+
 const app = express();
 
-app.listen("8080", () => {
-    console.log("Server running");
+console.log(config.port);
+
+app.listen(config.port, () => {
+    console.log(`Server running on ${config.port}`);
 });
