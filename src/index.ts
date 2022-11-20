@@ -1,10 +1,7 @@
-import express, { Request, Response } from "express";
+import app from "./server";
+import { Request, Response } from "express";
 import config from "./config";
 import { Book } from "./models/Book";
-
-const app = express();
-
-app.use(express.json());
 
 const books: Map<number, Book> = new Map<number, Book>();
 var autoGenId: number = 0;
