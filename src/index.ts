@@ -10,7 +10,7 @@ app.listen(config.port, () => {
     console.log(`Server running on ${config.port}`);
 });
 
-app.get("/books", (req: Request, res: Response) => {
+app.get("/books", (_req: Request, res: Response) => {
     return res.send(Array.from(books.values()));
 });
 
